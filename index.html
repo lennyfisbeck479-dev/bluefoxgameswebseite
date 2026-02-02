@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlueFoxGames — Play & Download</title>
+  <meta name="description" content="BlueFoxGames — Premium browser games and Windows downloads." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-mesh"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/brandlogo.png" alt="BlueFoxGames" class="logo" onerror="this.style.display='none'"/>
+      <div class="brand-text">
+        <h1>BlueFoxGames</h1>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="controls">
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input id="search" type="search" placeholder="Search title..." aria-label="Search games" />
+        </div>
+        
+        <div class="filter-wrapper">
+          <select id="filter" aria-label="Filter games">
+            <option value="all">All Platforms</option>
+            <option value="web">Browser (Web)</option>
+            <option value="exe">Windows (.exe)</option>
+          </select>
+          <i class="fa-solid fa-chevron-down select-icon"></i>
+        </div>
+      </div>
+
+      <nav class="socials">
+        <a href="https://bluefox-games.itch.io/" target="_blank" rel="noopener" title="Itch.io"><i class="fa-brands fa-itch-io"></i></a>
+        <a href="https://www.tiktok.com/@bluefoxgames1" target="_blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Level Up Your <span class="text-gradient">Break Time</span></h2>
+      <p>Play instantly in your browser or download native builds for maximum performance.</p>
+      <div class="hero-stats">
+        <span><i class="fa-solid fa-gamepad"></i> Web Games</span>
+        <span class="divider">/</span>
+        <span><i class="fa-brands fa-windows"></i> Windows Builds</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    
+    <section class="panel" id="webSection">
+      <header class="panel-head">
+        <div class="head-title">
+          <i class="fa-solid fa-globe accent-icon"></i>
+          <div>
+            <h2>Browser Games</h2>
+            <p class="muted">Instant play • No installation</p>
+          </div>
+        </div>
+      </header>
+      <div id="webGrid" class="grid"></div>
+    </section>
+
+    <section class="panel" id="exeSection">
+      <header class="panel-head">
+        <div class="head-title">
+          <i class="fa-brands fa-windows accent-icon"></i>
+          <div>
+            <h2>Windows Downloads</h2>
+            <p class="muted">Native .exe builds • High performance</p>
+          </div>
+        </div>
+      </header>
+      <div id="exeList" class="exe-grid"></div>
+    </section>
+
+  </main>
+
+  <div id="playerModal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Playing Game</h3>
+        <button id="closeModal" class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="gameFrame" src="" frameborder="0" allowfullscreen sandbox="allow-scripts allow-same-origin allow-pointer-lock"></iframe>
+      </div>
+      <div class="modal-footer">
+        <span class="tip"><i class="fa-solid fa-circle-info"></i> Press Esc to show cursor</span>
+        <div class="modal-actions">
+          <a id="modalDownload" class="btn secondary" download><i class="fa-solid fa-download"></i> Download ZIP</a>
+          <button id="openNewTab" class="btn primary"><i class="fa-solid fa-up-right-from-square"></i> New Tab</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="brand-mini">
+        <strong>BlueFoxGames</strong>
+        <span class="copyright">© <span id="year"></span> — Indie Development</span>
+      </div>
+      <div class="footer-links">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://bluefox-games.itch.io/" target="_blank">Itch.io</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

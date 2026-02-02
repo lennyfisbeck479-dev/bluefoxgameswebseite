@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — BlueFoxGames</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-mesh"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/brandlogo.png" alt="BlueFoxGames" class="logo" onerror="this.style.display='none'"/>
+      <div class="brand-text">
+        <h1>BlueFoxGames</h1>
+      </div>
+    </div>
+    <div class="header-right">
+      <a href="index.html" class="btn secondary"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <header class="panel-head">
+        <div class="head-title">
+          <i class="fa-solid fa-file-contract accent-icon"></i>
+          <h2>Terms of Service</h2>
+        </div>
+      </header>
+      
+      <div class="card-body" style="color: var(--text-muted); line-height: 1.8;">
+        <h3 style="color: #fff; font-family: var(--font-head); margin-top: 0;">1. Agreement to Terms</h3>
+        <p>By accessing or using the BlueFoxGames website, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, then you may not access the service.</p>
+        
+        <h3 style="color: #fff; font-family: var(--font-head); margin-top: 30px;">2. Intellectual Property</h3>
+        <p>The games, artwork, and code found on this website are the intellectual property of BlueFoxGames, unless otherwise stated. You may download our games for personal use, but you may not redistribute, sell, or modify the files without our explicit permission.</p>
+        
+        <h3 style="color: #fff; font-family: var(--font-head); margin-top: 30px;">3. Downloads and Safety</h3>
+        <p>We strive to keep our downloadable content (.exe files) safe and free of malware. However, you download and run files at your own risk. BlueFoxGames is not liable for any damages to your computer system or loss of data resulting from the download of any material.</p>
+
+        <h3 style="color: #fff; font-family: var(--font-head); margin-top: 30px;">4. User Conduct</h3>
+        <p>You agree not to use the website or our games in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website.</p>
+        
+        <h3 style="color: #fff; font-family: var(--font-head); margin-top: 30px;">5. Changes to Terms</h3>
+        <p>We reserve the right to modify these terms at any time. We will do so by posting and drawing attention to the updated terms on the Site. Your decision to continue to visit and make use of the Site after such changes have been made constitutes your formal acceptance of the new Terms of Service.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="brand-mini">
+        <strong>BlueFoxGames</strong>
+        <span class="copyright">© <span id="year"></span> — Indie Development</span>
+      </div>
+      <div class="footer-links">
+        <a href="terms.html" style="color: var(--accent);">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://bluefox-games.itch.io/" target="_blank">Itch.io</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
